@@ -1,23 +1,19 @@
 # JSON assertions for PHPUnit
 
-![Unit tests](https://github.com/martin-helmich/phpunit-json-assert/workflows/Unit%20tests/badge.svg)
-[![Code Climate](https://codeclimate.com/github/martin-helmich/phpunit-json-assert/badges/gpa.svg)](https://codeclimate.com/github/martin-helmich/phpunit-json-assert)
-[![Test Coverage](https://codeclimate.com/github/martin-helmich/phpunit-json-assert/badges/coverage.svg)](https://codeclimate.com/github/martin-helmich/phpunit-json-assert/coverage)
-[![Issue Count](https://codeclimate.com/github/martin-helmich/phpunit-json-assert/badges/issue_count.svg)](https://codeclimate.com/github/martin-helmich/phpunit-json-assert)
+![Unit tests](https://github.com/sidz/phpunit-json-assert/workflows/Unit%20tests/badge.svg)
 
 This library adds several new assertions to [PHPUnit](https://phpunit.de/)
 that allow you to easily and concisely verify complex data structures (often,
 but not necessarily, JSON documents) using JSONPath expressions and JSON
 schemas.
 
-## Author and copyright
+## Copyright
 
-Martin Helmich <kontakt@martin-helmich.de>  
 This library is [MIT-licensed](LICENSE.txt).
 
 ## Installation
 
-    $ composer require --dev helmich/phpunit-json-assert
+    $ composer require --dev sidz/phpunit-json-assert
 
 ## Compatibility
 
@@ -33,13 +29,13 @@ When you are using `composer require` and have already declared a dependency to 
 
 ## Usage
 
-Simply use the trait `Helmich\JsonAssert\JsonAssertions` in your test case. This
+Simply use the trait `Sid\JsonAssert\JsonAssertions` in your test case. This
 trait offers a set of new `assert*` functions that you can use in your test
 cases:
 
 ```php
 <?php
-use Helmich\JsonAssert\JsonAssertions;
+use Sid\JsonAssert\JsonAssertions;
 use PHPUnit\Framework\TestCase;
 
 class MyTestCase extends TestCase
@@ -50,9 +46,9 @@ class MyTestCase extends TestCase
   {
     $jsonDocument = [
       'id'          => 1000,
-      'username'    => 'mhelmich',
-      'given_name'  => 'Martin',
-      'family_name' => 'Helmich',
+      'username'    => 'fakeuser',
+      'given_name'  => 'My',
+      'family_name' => 'Name',
       'age'         => 27,
       'phones' => [
         'mobile' => 111,
@@ -65,7 +61,7 @@ class MyTestCase extends TestCase
       ]
     ];
 
-    $this->assertJsonValueEquals($jsonDocument, '$.username', 'mhelmich');
+    $this->assertJsonValueEquals($jsonDocument, '$.username', 'fakeuser');
     $this->assertJsonValueEquals($jsonDocument, '$.phones.mobile', 111);
     $this->assertJsonValueEquals($jsonDocument, '$.hobbies.0', 'Heavy Metal');
     $this->assertJsonValueEquals($jsonDocument, '$.hobbies[*]', 'Open Source Software');
@@ -81,7 +77,7 @@ Alternatively, you can use the functional interface by including the file
 
 ```php
 <?php
-use Helmich\JsonAssert\JsonAssertions;
+use Sid\JsonAssert\JsonAssertions;
 use PHPUnit\Framework\TestCase;
 
 require_once('path/to/Functions.php');
@@ -94,9 +90,9 @@ class MyTestCase extends TestCase
   {
     $jsonDocument = [
       'id'          => 1000,
-      'username'    => 'mhelmich',
-      'given_name'  => 'Martin',
-      'family_name' => 'Helmich',
+      'username'    => 'fakeuser',
+      'given_name'  => 'My',
+      'family_name' => 'Name',
       'age'         => 27,
       'hobbies'     => [
         "Heavy Metal",
@@ -105,9 +101,9 @@ class MyTestCase extends TestCase
       ]
     ];
 
-    assertThat($jsonDocument, containsJsonValue('$.username', 'mhelmich'));
+    assertThat($jsonDocument, containsJsonValue('$.username', 'fakeuser'));
     assertThat($jsonDocument, matchesJsonConstraints([
-        '$.given_name' => 'Martin',
+        '$.given_name' => 'My',
         '$.age'        => greaterThanOrEqual(18),
         '$.hobbies'    => callback(function($a) { return count($a) > 2; })
     ]));
@@ -147,7 +143,7 @@ Example:
 
 ```php
 $this->assertJsonDocumentMatches($jsonDocument, [
-    '$.username' => 'mhelmich',
+    '$.username' => 'fakeuser',
     '$.age'      => PHPUnit_Framework_Assert::greaterThanOrEqual(18)
 ]);
 ```
