@@ -1,11 +1,15 @@
 {
-    "name": "helmich/phpunit-json-assert",
+    "name": "sidz/phpunit-json-assert",
     "description": "PHPUnit assertions for JSON documents",
     "license": "MIT",
     "authors": [
         {
             "name": "Martin Helmich",
             "email": "m.helmich@mittwald.de"
+        },
+        {
+            "name": "Oleg Zhulnev",
+            "homepage": "https://github.com/sidz"
         }
     ],
     "require": {
@@ -21,10 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Helmich\\JsonAssert\\": "src/"
+            "Sid\\JsonAssert\\": "src/"
         }
     },
     "autoload-dev": {
+        "psr-4": {
+            "Sid\\JsonAssert\\Tests\\": "tests/"
+        },
         "files": [
             "src/Functions.php"
         ]

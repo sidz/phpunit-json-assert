@@ -1,8 +1,8 @@
 <?php
 
-use Helmich\JsonAssert\Constraint\JsonValueMatches;
-use Helmich\JsonAssert\Constraint\JsonValueMatchesMany;
-use Helmich\JsonAssert\Constraint\JsonValueMatchesSchema;
+use Sid\JsonAssert\Constraint\JsonValueMatches;
+use Sid\JsonAssert\Constraint\JsonValueMatchesMany;
+use Sid\JsonAssert\Constraint\JsonValueMatchesSchema;
 use PHPUnit\Framework\Constraint\Constraint;
 use PHPUnit\Framework\Constraint\IsEqual;
 

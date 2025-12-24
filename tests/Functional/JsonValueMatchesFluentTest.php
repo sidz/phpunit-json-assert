@@ -1,5 +1,5 @@
 <?php
-namespace Helmich\JsonAssert\Tests\Functional;
+namespace Sid\JsonAssert\Tests\Functional;
 
 use PHPUnit\Framework\TestCase;
 
