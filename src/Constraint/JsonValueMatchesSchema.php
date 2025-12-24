@@ -1,5 +1,5 @@
 <?php
-namespace Helmich\JsonAssert\Constraint;
+namespace Sid\JsonAssert\Constraint;
 
 use JsonSchema\Validator;
 use PHPUnit\Framework\Constraint\Constraint;
@@ -8,7 +8,7 @@ use stdClass;
 /**
  * A constraint for asserting that a JSON document matches a schema
  *
- * @package    Helmich\JsonAssert
+ * @package    Sid\JsonAssert
  * @subpackage Constraint
  */
 class JsonValueMatchesSchema extends Constraint

@@ -1,9 +1,9 @@
 <?php
-namespace Helmich\JsonAssert;
+namespace Sid\JsonAssert;
 
-use Helmich\JsonAssert\Constraint\JsonValueMatches;
-use Helmich\JsonAssert\Constraint\JsonValueMatchesMany;
-use Helmich\JsonAssert\Constraint\JsonValueMatchesSchema;
+use Sid\JsonAssert\Constraint\JsonValueMatches;
+use Sid\JsonAssert\Constraint\JsonValueMatchesMany;
+use Sid\JsonAssert\Constraint\JsonValueMatchesSchema;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\Constraint\Constraint;
 use PHPUnit\Framework\Constraint\IsEqual;
@@ -11,7 +11,7 @@ use PHPUnit\Framework\Constraint\IsEqual;
 /**
  * A trait that can be used in test classes for easy use of JSON assertions
  *
- * @package Helmich\JsonAssert
+ * @package Sid\JsonAssert
  */
 trait JsonAssertions
 {

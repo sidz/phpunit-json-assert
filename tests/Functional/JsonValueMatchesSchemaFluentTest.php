@@ -1,7 +1,7 @@
 <?php
-namespace Helmich\JsonAssert\Tests\Functional;
+namespace Sid\JsonAssert\Tests\Functional;
 
-use Helmich\JsonAssert\JsonAssertions;
+use Sid\JsonAssert\JsonAssertions;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\TestCase;
 

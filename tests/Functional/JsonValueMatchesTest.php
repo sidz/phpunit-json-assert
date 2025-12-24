@@ -1,10 +1,9 @@
 <?php
-namespace Helmich\JsonAssert\Tests\Functional;
+namespace Sid\JsonAssert\Tests\Functional;
 
-use Helmich\JsonAssert\JsonAssertions;
+use Sid\JsonAssert\JsonAssertions;
 use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\Attributes\RequiresPhpunit;
 use PHPUnit\Framework\Constraint\Count;
 use PHPUnit\Framework\Constraint\IsEqual;
 use PHPUnit\Framework\Constraint\IsType;

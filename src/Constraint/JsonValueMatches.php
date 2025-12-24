@@ -1,5 +1,5 @@
 <?php
-namespace Helmich\JsonAssert\Constraint;
+namespace Sid\JsonAssert\Constraint;
 
 use Flow\JSONPath\JSONPath;
 use PHPUnit\Framework\Constraint\Constraint;
@@ -8,7 +8,7 @@ use PHPUnit\Framework\Constraint\Constraint;
  * A simple constraints that asserts that a single value of a JSON document
  * matches a given constraint.
  *
- * @package    Helmich\JsonAssert
+ * @package    Sid\JsonAssert
  * @subpackage Constraint
  */
 class JsonValueMatches extends Constraint
